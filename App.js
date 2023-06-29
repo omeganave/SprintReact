@@ -12,6 +12,12 @@ const App = () => {
   };
 
   return (
+    <>
+    <header>
+    <div className="header">
+      <div className="headerText">DOG IMAGE SEARCH</div>
+    </div>
+    </header>
     <div className="App">
       <SearchBar
         onSearch={handleSearch}
@@ -20,6 +26,7 @@ const App = () => {
       />
       <ImageList breed={breed} numImages={numImages} />
     </div>
+    </>
   );
 };
 

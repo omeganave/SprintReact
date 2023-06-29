@@ -52,10 +52,11 @@ const SearchBar = ({ onSearch, onNumImagesChange, selectedBreed }) => {
 
   return (
     <div>
-      <h2>Search Bar</h2>
+      {/* <h2>Search Bar</h2> */}
+      <br /><br /><br /><br /><br /><br />
       <div>
-        <label htmlFor="breedSelect">Select Breed:</label>
-        <select id="breedSelect" value={selectedBreed} onChange={handleSelectBreed}>
+        {/* <label htmlFor="breedSelect">Select Breed:</label> */}
+        <select id="breedSelect" value={selectedBreed} onChange={handleSelectBreed} className = "selectBox">
           <option value="">Select a breed</option>
           {breeds.map((breed) => (
             <option key={breed} value={breed}>
@@ -65,7 +66,7 @@ const SearchBar = ({ onSearch, onNumImagesChange, selectedBreed }) => {
         </select>
       </div>
       <div>
-        <label htmlFor="numImagesInput">Number of Images:</label>
+        {/* <label htmlFor="numImagesInput">Number of Images:</label> */}
         <input
           id="numImagesInput"
           type="number"
@@ -73,9 +74,11 @@ const SearchBar = ({ onSearch, onNumImagesChange, selectedBreed }) => {
           max="100"
           value={numImages}
           onChange={handleNumImagesChange}
+          className = "numBox"
         />
       </div>
-      <button onClick={handleShowImages}>Show Images</button>
+      <button onClick={handleShowImages} className = "showBox">Show Images</button>
+      <br /> <br />
     </div>
   );
 };

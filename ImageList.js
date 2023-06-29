@@ -42,12 +42,14 @@ const ImageList = ({ breed, numImages }) => {
 
   return (
     <div>
-      <h2>Image List</h2>
+      {/* <h2>Image List</h2> */}
       {images.length > 0 ? (
-        <ul>
+        <ul className = "extraPadding">
           {images.map((image, index) => (
             <li key={index}>
-              <img src={image} alt={`Dog ${index + 1}`} />
+                <div className = "picDiv">
+                <img src={image} alt={`Dog ${index + 1}`} className = "img"/>
+                </div>
             </li>
           ))}
         </ul>
@@ -59,4 +61,3 @@ const ImageList = ({ breed, numImages }) => {
 };
 
 export default ImageList;
-
